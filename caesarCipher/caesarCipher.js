@@ -1,34 +1,40 @@
 var caesarCipher = function(string, key){
-  var keyCode = retriveCode(key);
-  var newString = []; 
+  var newString   = []; 
+  var regex       = /[A-Za-z]/;
   var stringArray = string.split('');
 
-  function retrieveCode(key) {
-    if ( key < 27 ) return key;
-    return key % 26;
+  function getKeyCode(key) {
+    if ( key < 27 ){
+      return key;
+    } else {
+      return (key % 26);
+    }
   }
 
   for (var count = 0; count < stringArray.length; count++) {
-    if ( stringArray[count].match([/A-Za-z/]) ) {
-      newString.push(getCodedChar(string));
+    if ( stringArray[count].match(regex) ) {
+      var newChar = getCodedChar((stringArray[count]), key);
+      newString.push(newChar);
     } else {
       newString.push(stringArray[count]);
     }
   }
 
-  function getCodedChar(string){
-    var charCode  = string.charCodeAt(0);
+  function getCodedChar(string, key){
+    var charCode = string.charCodeAt(0);
+    var keyCode = getKeyCode(key);
+    var newCode = charCode + keyCode;
 
-    if ( (charCode < 91) && ( (charCode + keyCode ) > 90 ) ) {
-      return String.fromCharCode(charCode + keyCode - 26);
+    if ( (charCode < 91) && ( newCode > 90 ) ) {
+      return String.fromCharCode(newCode - 26);
     } else if ( charCode < 91 ) {
-      return String.fromCharCode(charCode + keyCode );
-    } else if ( (charCode < 123) && ( (charCode + keyCode ) > 122 )) {
-      return String.fromCharCode(charCode + keyCode - 26);
+      return String.fromCharCode(newCode);
+    } else if ( (charCode < 123) && ( newCode > 122 )) {
+      return String.fromCharCode(newCode - 26);
     } else {
-      return String.fromCharCode(charCode + keyCode );
+      return String.fromCharCode(newCode);
     }
   }
 
-  return newString;
+  return newString.join('');
 };
