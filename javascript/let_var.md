@@ -1,15 +1,15 @@
-##Let vs. Var
+#Let vs. Var
 
 The difference is scoping.
 
-`var` is scoped to the nearest function block
+`var` is scoped to the nearest function block.
 
 `let` is scoped to the nearest enclosing block. Variables declared with `let`
 are not accessible before they are declared in their enclosing block. 
 
 ###**Global**
 
-Both are identical when used outside a function block
+Both are identical when used outside a function block.
 ~~~~
     let me = 'go'; 
     var i = 'able'; 
@@ -18,7 +18,7 @@ Both are identical when used outside a function block
 
 ###**Function**
 
-They are identical when used like this in a function block
+They are identical when used like this in a function block.
 ~~~~
     function ingWithinEstablishedParameters() { 
       let terOfRecommendation = 'awesome worker!'; 
