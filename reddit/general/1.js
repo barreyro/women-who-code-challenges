@@ -21,14 +21,15 @@ function findFrequent(arr){
   var similarFrequencies = [];
   for (var key in counterObj){
     if (counterObj.hasOwnProperty(key)){ 
+      var num = parseInt(key);
       if (mostFrequent === 0){
-        similarFrequencies.push(key);
-        mostFrequence = key;
-      } else if (counterObj[key] > counterObj[mostFrequent]){
+        similarFrequencies.push(num);
+        mostFrequent = num;
+      } else if (counterObj[num] > counterObj[mostFrequent]){
         similarFrequencies = [];
-        mostFrequent = key;
-      } else if(counterObj[key] == counterObj[mostFrequent]){
-        similarFrequencies.push(key);
+        mostFrequent = num;
+      } else if(counterObj[num] == counterObj[mostFrequent]){
+        similarFrequencies.push(num);
       }
     }
   }
