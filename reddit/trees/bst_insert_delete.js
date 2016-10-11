@@ -11,10 +11,10 @@ function Node(value, parentNode, leftChild, rightChild){
   this.rightChild =  rightChild || '';
 }
 
-BST.prototype.addNode = function (value, parentNode, leftChild, rightChild){
-  var newNode = new Node(value, parentNode, leftChild, rightChild);
+BST.prototype.addNode = function (value) {
+  var newNode = new Node(value);
 
-  if (!this.root){ 
+  if (!this.root) { 
     this.root = newNode;
     return;
   } 
@@ -22,8 +22,8 @@ BST.prototype.addNode = function (value, parentNode, leftChild, rightChild){
   var parent  = this.root;
   var found   = false;
 
-  while (found === false){
-    if (newNode.value < parent.value){
+  while (found === false) {
+    if (newNode.value < parent.value) {
       if (!parent.leftChild) {
         parent.leftChild = newNode;
         found = true;
