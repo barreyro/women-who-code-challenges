@@ -40,3 +40,55 @@ BST.prototype.addNode = function (value) {
     }
   }
 };
+
+BST.prototype.deleteNode = function (value) {
+  var rootNode = this.root || '';
+  var currentNode = this.root || '';
+  var loop = true;
+  while (loop === true) {
+    if (!currentNode){
+      return "node not found";
+    } else if (currentNode.value < value){
+      currentNode = currentNode.rightChild;
+    } else if (currentNode.value > value) {
+      currentNode = currentNode.leftChild;
+    } else if (currentNode.value == value) {
+      var rootBool = (rootNode == currentNode);
+      if (currentNode.leftChild) {
+        recursiveFxn(currentNode, rootBool, left);
+      } else if (!currentNode.leftChild && currentNode.rightChild){
+        recursiveFxn(currentNode, rootBool, right);
+      } else {
+        rootNode.value == value;
+      }
+      var newNode = recursiveFxn(currentNode, rootBool);
+      this.root = newNode;
+      loop = false;
+    }
+  }
+
+  function recursiveFxn(currentNode, rootBool){
+    var ogRightChildNode = currentNode.rightChild;
+
+    if (rootBool === true){
+      var newRightChildNode = currentNode.leftChild.rightChild;
+
+      currentNode = currentNode.leftChild;
+      currentNode.rightChild == rightChildNode;
+
+      recusiveFxn(currentNode, false);
+    } else if(currentNod
+  };
+
+};
+
+
+
+
+
+
+
+
+
+
+

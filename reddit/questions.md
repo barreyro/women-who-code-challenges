@@ -17,7 +17,7 @@ General
 [ ]HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s)
 
 Strings
-[ ]Find the first non-repeated character in a String
+[bf]Find the first non-repeated character in a String
 [ ]Reverse a String iteratively and recursively
 [ ]Determine if 2 Strings are anagrams
 [ ]Check if String is a palindrome
@@ -28,7 +28,7 @@ Strings
 [ ]HARD: Given a single-line text String and a maximum width value, write the function 'String justify(String text, int maxWidth)' that formats the input text using full-justification, i.e., extra spaces on each line are equally distributed between the words; the first word on each line is flushed left and the last word on each line is flushed right
 
 Trees
-[ ]Implement a BST with insert and delete functions
+[insert ]Implement a BST with insert and delete functions
 [ ]Print a tree using BFS and DFS
 [ ]Write a function that determines if a tree is a BST
 [ ]Find the smallest element in a BST
@@ -43,7 +43,7 @@ Trees
 [ ]HARD: Construct a BST given the pre-order and in-order traversal Strings
 
 Stacks, Queues, and Heaps
-[ ]Implement a stack with push and pop functions
+[x]Implement a stack with push and pop functions
 [ ]Implement a queue with queue and dequeue functions
 [ ]Find the minimum element in a stack in O(1) time
 [ ]Write a function that sorts a stack (bonus: sort the stack in place without extra memory)
