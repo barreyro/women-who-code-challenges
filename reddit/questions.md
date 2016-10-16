@@ -60,7 +60,7 @@ Linked Lists
 [ ]Reverse a linked list iteratively and recursively
 
 Sorting
-[ ]Implement bubble sort
+[x]Implement bubble sort
 [ ]Implement selection sort
 [ ]Implement insertion sort
 [ ]Implement merge sort
