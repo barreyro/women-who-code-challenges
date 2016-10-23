@@ -20,8 +20,8 @@ Strings
 [bf]Find the first non-repeated character in a String
 [ ]Reverse a String iteratively and recursively
 [x]Determine if 2 Strings are anagrams
-[ ]Check if String is a palindrome
-[ ]Check if a String is composed of all unique characters
+[x]Check if String is a palindrome
+[x]Check if a String is composed of all unique characters
 [ ]Determine if a String is an int or a double
 [ ]HARD: Find the shortest palindrome in a String
 [ ]HARD: Print all permutations of a String
@@ -44,7 +44,7 @@ Trees
 
 Stacks, Queues, and Heaps
 [x]Implement a stack with push and pop functions
-[ ]Implement a queue with queue and dequeue functions
+[x]Implement a queue with queue and dequeue functions
 [ ]Find the minimum element in a stack in O(1) time
 [ ]Write a function that sorts a stack (bonus: sort the stack in place without extra memory)
 [ ]Implement a binary min heap. Turn it into a binary max heap
