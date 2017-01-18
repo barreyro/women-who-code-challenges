@@ -1,5 +1,28 @@
-/*
+function LinkedList(){
+  this.head = null;
+  this.tail = null;
+}
 
+function  Node(value){
+  this.value = null;
+  this.next = null;
+}
+
+
+var linkedList1 = new LinkedList();
+var node1 = new Node(12);
+
+LinkedList.prototype.addNode = function(value){
+  newNode = new Node(value);
+  if (!this.head) {
+    this.head = newNode;
+  } else{
+  }
+  this.tail = newNode;
+};
+
+  
+/*
 LINKED LIST
 
 Comprised of nodes that represent a sequence.
@@ -46,6 +69,7 @@ add a new tail node at the end of the list with the associated value passed in
 myList.removeTail()
 => removed tail node
 remove the tail node from the list
+
 
 
 ** Part 2
